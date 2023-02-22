@@ -237,6 +237,7 @@ def main():  # pragma: no cover
     signal.signal(signal.SIGTERM, shutdown)
 
     app = celery.Celery(broker=opts.broker)
+    app.conf.accept_content = ['application/json', 'application/x-python-serialize', 'pickle']
     redis_client = redis.Redis.from_url(opts.broker)
 
     t = MonitorThread(app=app, daemon=True)

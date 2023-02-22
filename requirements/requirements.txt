@@ -1,3 +1,6 @@
-redis==2.10.5
-prometheus_client==0.1.1
-celery==4.1.0
+#redis==2.10.5
+#prometheus_client==0.1.1
+#celery==4.1.0
+celery
+redis
+prometheus_client
